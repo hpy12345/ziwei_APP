@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 赛博新中式 · Cyber-Almanac 配色体系 -->
+    <color name="ziwei_deep_space">#140A24</color>
+    <color name="xuanming_purple">#1E1136</color>
+    <color name="liuguang_gold">#E6C17A</color>
+    <color name="zhusha_red">#D94E4E</color>
+    <color name="xuanqing_jade">#4E9A8E</color>
+    <color name="xuanzhi_white">#F4EFE6</color>
+    <color name="huimo_ink">#2C221E</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

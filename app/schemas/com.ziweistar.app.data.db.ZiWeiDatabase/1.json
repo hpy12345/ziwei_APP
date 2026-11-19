@@ -1,0 +1,475 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "40560049e368cdd7430f08e53bb1bf3d",
+    "entities": [
+      {
+        "tableName": "profile",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `userRef` TEXT NOT NULL, `isMale` INTEGER NOT NULL, `birthMillis` INTEGER NOT NULL, `fourPillars` TEXT NOT NULL, `dayMaster` TEXT NOT NULL, `dayMasterStrength` TEXT NOT NULL, `lunarBirthText` TEXT NOT NULL, `relationship` TEXT NOT NULL, `partnerFrequency` TEXT NOT NULL, `privacyTier` TEXT NOT NULL, `heightCm` INTEGER, `weightKg` INTEGER, `boneType` TEXT NOT NULL, `flaccidLengthCm` REAL, `flaccidGirthCm` REAL, `erectLengthCm` REAL, `erectGirthCm` REAL, `cupSize` TEXT, `jadeGateShape` TEXT, `menstrualPhase` TEXT NOT NULL, `stealthIcon` TEXT NOT NULL, `biometricLock` INTEGER NOT NULL, `llmEndpoint` TEXT NOT NULL, `llmApiKey` TEXT NOT NULL, `llmModel` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `onboardingDone` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userRef",
+            "columnName": "userRef",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isMale",
+            "columnName": "isMale",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "birthMillis",
+            "columnName": "birthMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fourPillars",
+            "columnName": "fourPillars",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayMaster",
+            "columnName": "dayMaster",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayMasterStrength",
+            "columnName": "dayMasterStrength",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lunarBirthText",
+            "columnName": "lunarBirthText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relationship",
+            "columnName": "relationship",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "partnerFrequency",
+            "columnName": "partnerFrequency",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "privacyTier",
+            "columnName": "privacyTier",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "heightCm",
+            "columnName": "heightCm",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "weightKg",
+            "columnName": "weightKg",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "boneType",
+            "columnName": "boneType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "flaccidLengthCm",
+            "columnName": "flaccidLengthCm",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flaccidGirthCm",
+            "columnName": "flaccidGirthCm",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "erectLengthCm",
+            "columnName": "erectLengthCm",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "erectGirthCm",
+            "columnName": "erectGirthCm",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cupSize",
+            "columnName": "cupSize",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "jadeGateShape",
+            "columnName": "jadeGateShape",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "menstrualPhase",
+            "columnName": "menstrualPhase",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stealthIcon",
+            "columnName": "stealthIcon",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "biometricLock",
+            "columnName": "biometricLock",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "llmEndpoint",
+            "columnName": "llmEndpoint",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "llmApiKey",
+            "columnName": "llmApiKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "llmModel",
+            "columnName": "llmModel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onboardingDone",
+            "columnName": "onboardingDone",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "session",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `startedAt` INTEGER NOT NULL, `endedAt` INTEGER NOT NULL, `dayKey` TEXT NOT NULL, `durationSeconds` INTEGER NOT NULL, `pausedSeconds` INTEGER NOT NULL, `methodCodes` TEXT NOT NULL, `methodNames` TEXT NOT NULL, `starId` TEXT, `starName` TEXT NOT NULL, `starAttribute` TEXT NOT NULL, `mediums` TEXT NOT NULL, `venue` TEXT NOT NULL, `climax` TEXT NOT NULL, `satisfactionTenths` INTEGER NOT NULL, `adverse` TEXT NOT NULL, `forced` INTEGER NOT NULL, `followedOracle` INTEGER NOT NULL, `fortuneLabel` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAt",
+            "columnName": "startedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endedAt",
+            "columnName": "endedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dayKey",
+            "columnName": "dayKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationSeconds",
+            "columnName": "durationSeconds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pausedSeconds",
+            "columnName": "pausedSeconds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodCodes",
+            "columnName": "methodCodes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodNames",
+            "columnName": "methodNames",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "starId",
+            "columnName": "starId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "starName",
+            "columnName": "starName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "starAttribute",
+            "columnName": "starAttribute",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mediums",
+            "columnName": "mediums",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "venue",
+            "columnName": "venue",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "climax",
+            "columnName": "climax",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "satisfactionTenths",
+            "columnName": "satisfactionTenths",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adverse",
+            "columnName": "adverse",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "forced",
+            "columnName": "forced",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "followedOracle",
+            "columnName": "followedOracle",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fortuneLabel",
+            "columnName": "fortuneLabel",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_session_startedAt",
+            "unique": false,
+            "columnNames": [
+              "startedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_session_startedAt` ON `${TABLE_NAME}` (`startedAt`)"
+          },
+          {
+            "name": "index_session_dayKey",
+            "unique": false,
+            "columnNames": [
+              "dayKey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_session_dayKey` ON `${TABLE_NAME}` (`dayKey`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "star_figure",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `attribute` TEXT NOT NULL, `avatarPath` TEXT, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "attribute",
+            "columnName": "attribute",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "avatarPath",
+            "columnName": "avatarPath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "daily_oracle",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`dayKey` TEXT NOT NULL, `decisionLockJson` TEXT NOT NULL, `renderedJson` TEXT, `source` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`dayKey`))",
+        "fields": [
+          {
+            "fieldPath": "dayKey",
+            "columnName": "dayKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decisionLockJson",
+            "columnName": "decisionLockJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "renderedJson",
+            "columnName": "renderedJson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "dayKey"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "periodic_report",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`periodKey` TEXT NOT NULL, `kind` TEXT NOT NULL, `payloadJson` TEXT NOT NULL, `source` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`periodKey`))",
+        "fields": [
+          {
+            "fieldPath": "periodKey",
+            "columnName": "periodKey",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "payloadJson",
+            "columnName": "payloadJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "periodKey"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '40560049e368cdd7430f08e53bb1bf3d')"
+    ]
+  }
+}

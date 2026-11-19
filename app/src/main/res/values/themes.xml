@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.ZiWeiStar" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/ziwei_deep_space</item>
+        <item name="android:navigationBarColor">@color/ziwei_deep_space</item>
+        <item name="android:windowBackground">@color/ziwei_deep_space</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <style name="Theme.ZiWeiStar.Splash" parent="Theme.ZiWeiStar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <!-- 天罡符箓解锁用的呼吸摩擦印 -->
+    <style name="Theme.ZiWeiStar.Seal">
+        <item name="android:windowBackground">@color/ziwei_deep_space</item>
+    </style>
+</resources>

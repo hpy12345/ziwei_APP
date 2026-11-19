@@ -1,35 +1,34 @@
-# Gradle files
+# ========== Gradle / Kotlin 构建缓存 ==========
 .gradle/
-build/
 .kotlin/
-
-# Local configuration file (sdk path, etc)
+**/build/
 local.properties
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
+# ========== 签名材料（含明文密码，严禁提交）==========
+keystore.properties
+keystore/
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# ========== 构建产物 / APK ==========
+dist/
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+.cxx/
+output-metadata.json
 
-# Android Profiling
+# ========== 日志 / Google 服务 / 性能分析 ==========
+*.log
+google-services.json
 *.hprof
+
+# ========== IDE / 系统文件 ==========
+.idea/
+*.iml
+.DS_Store
+*.swp
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml

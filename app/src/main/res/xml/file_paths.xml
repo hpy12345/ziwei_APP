@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="star_avatars" path="star_avatars/" />
+    <files-path name="private_vault" path="vault/" />
+</paths>
